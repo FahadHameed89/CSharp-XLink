@@ -19,7 +19,16 @@ namespace CSharpXLink
         // Write tests for the edge cases. 
         public static bool PerfectSquare(int number)
         {
-            return true;
+            // IF number % number == 0, return true;
+            // ELSE return false;
+            if (number % number == 0)
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
         }
     }
 }

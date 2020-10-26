@@ -29,5 +29,25 @@ namespace CSharpXLink_Tests
             // In this case, we are saying that the expected value is EQUAL to the output.
             Assert.Equal(expected, output);
         }
+
+        [Theory]
+        [InlineData(16, true)]
+        [InlineData(25, true)]
+        [InlineData(10, false)]
+
+
+        public void PerfectSquare_Valid(int input2, bool expected2)
+        {
+            // Arrange
+            bool output2; 
+            // Act
+            output2 = Program.PerfectSquare(input2);
+
+            // Asset 
+            Assert.Equal(expected2, output2);
+
+        }
+
+
     }
 }
