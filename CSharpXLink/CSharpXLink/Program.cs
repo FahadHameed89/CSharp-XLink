@@ -1,5 +1,4 @@
 ﻿using System;
-using Xunit;
 
 namespace CSharpXLink
 {
@@ -13,6 +12,14 @@ namespace CSharpXLink
         public static int DivideByTwo(int number)
         {
             return number / 2;
+        }
+
+        // In class practice
+        // Write the method to determine if a number is perfect square. Should return true if it is, else no. 
+        // Write tests for the edge cases. 
+        public static bool PerfectSquare(int number)
+        {
+            return true;
         }
     }
 }
