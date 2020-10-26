@@ -21,7 +21,9 @@ namespace CSharpXLink
         {
             // IF number % number == 0, return true;
             // ELSE return false;
-            if (number % number == 0)
+            double result = Math.Sqrt(number);
+            bool isSquare = result % 1 == 0;
+            if (isSquare == true)
             {
                 return true;
             }
