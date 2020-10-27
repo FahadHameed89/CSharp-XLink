@@ -34,7 +34,11 @@ namespace CSharpXLink_Tests
         [InlineData(16, true)]
         [InlineData(25, true)]
         [InlineData(10, false)]
-
+        [InlineData(100, false)]
+        [InlineData(-1, false)]
+        [InlineData(0, false)]
+        [InlineData(int.MaxValue, false)]
+        [InlineData(int.MinValue, false)]
 
         public void PerfectSquare_Valid(int input2, bool expected2)
         {
@@ -48,6 +52,30 @@ namespace CSharpXLink_Tests
 
         }
 
+        [Fact]
+        public void MathPi_Value()
+        {
+            // Arrange
+
+            // Act 
+
+            // Asset
+            Assert.Equal(3.141592653589793, Math.PI);
+        }
+
+        [Fact]
+        public void Exception_Test()
+        {
+            // Arrange - 
+
+            // Act
+
+            // Asset 
+            Assert.Throws<FormatException>(() => {
+                // This code block should throw an exception of the type in the angle brackets, else it will fail!
+                Program.ThrowsFormatException();
+            });
+        }
 
     }
 }

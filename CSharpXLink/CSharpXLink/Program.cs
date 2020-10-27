@@ -1,36 +1,28 @@
-﻿using System;
+﻿using CSharpOOP.Shapes;
+using System;
 
-namespace CSharpXLink
+namespace CSharpOOP
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        }
+            Drawing myDrawing = new Drawing();
+            Circle myCircle = new Circle(Shape.ColourValue.Blue, 10);
+            myDrawing.Draw(myCircle);
+            Rectangle myRectangle = new Rectangle(Shape.ColourValue.Green, 10, 10);
+            myDrawing.Draw(myRectangle);
 
-        public static int DivideByTwo(int number)
-        {
-            return number / 2;
-        }
+            myRectangle.Width = 12;
 
-        // In class practice
-        // Write the method to determine if a number is perfect square. Should return true if it is, else no. 
-        // Write tests for the edge cases. 
-        public static bool PerfectSquare(int number)
-        {
-            // IF number % number == 0, return true;
-            // ELSE return false;
-            double result = Math.Sqrt(number);
-            bool isSquare = result % 1 == 0;
-            if (isSquare == true)
-            {
-                return true;
-            }
-            else 
-            {
-                return false;
-            }
+            myCircle.Diameter = 25;
+
+            // Circle: Perimeter ~64, Area ~314
+            // Rect: Perimeter 40, Area 100
+
+            Console.WriteLine(myDrawing);
+            Console.WriteLine(myDrawing.LinesDrawn);
+            Console.WriteLine(myDrawing.SpaceCovered);
         }
     }
 }
